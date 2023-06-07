@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(233, 47%, 7%);
+    width: 1440px;
+    min-height: 100vh;
+    position: relative;
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(571px + 542px);
+    height: fit-content;
+}
+
+#sec1{
+    width: 571px;
+    height: 444px;
+    background-color: hsl(244, 38%, 16%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 72px;
+    color: hsl(0, 0%, 100%);
+    float: left;
+    position: relative;
+}
+
+
+#sec1 h1{
+    width: 373px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2.14rem;
+    margin-top: 0;
+}
+
+#sec1 h1 > span{
+    display: inline-block;
+    color: hsl(277, 64%, 61%);
+}
+
+#sec1 > p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 14px;
+    width: 343px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+#sec1-1{
+    width: 343px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 47px;
+}
+
+#sec1-1 p{
+    margin-top: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    position: relative;
+    height: 100%;
+}
+
+#sec1-1 p:nth-child(1){
+    float: left;
+}
+
+#sec1-1 p:nth-child(1)::after{
+    content: 'companies';
+    text-transform: uppercase;
+    position: absolute;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 7px;
+    color: hsla(0, 0%, 100%, 0.75);;
+    left: 0;
+    letter-spacing: 1px;
+    top: 25px;
+}
+
+#sec1-1 p:nth-child(2){
+    
+    float: left;
+    margin-left: 120px;
+}
+
+#sec1-1 p:nth-child(2)::after{
+    content: 'templates';
+    text-transform: uppercase;
+    position: absolute;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 7px;
+    color: hsla(0, 0%, 100%, 0.75);;
+    left: 0;
+    letter-spacing: 1px;
+    top: 25px;
+}
+
+#sec1-1 p:nth-child(3){
+    float: right;
+}
+
+#sec1-1 p:nth-child(3)::after{
+    content: 'queries';
+    text-transform: uppercase;
+    position: absolute;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 7px;
+    color: hsla(0, 0%, 100%, 0.75);;
+    left: 0;
+    letter-spacing: 1px;
+    top: 25px;
+}
+
+#sec2{
+    background-image: url('image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    width: 542px;
+    height: 444px;
+    float: right;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+
+#sec2::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #630099;
+    opacity: 0.5;
+}
+
+@media(max-width: 375px){
+    main{
+        width: 328px;
+    }
+    
+    #sec2{
+        clear: both;
+        width: 100%;
+        height: 240px;
+        background-image: url('image-header-mobile.jpg');
+        background-size: cover;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 0;
+    }
+    
+    #sec2::before{
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 0;
+    }
+    
+    #sec1{
+        width: 100%;
+        height: 540px;
+        padding: 34px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #sec1 h1{
+        width: 100%;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    
+    #sec1 > p{
+        width: 100%;
+        text-align: center;
+        line-height: 1.8;
+        font-size: 15px;
+    }
+    
+    #sec1-1{
+        width: 258px;
+        top: 305px;
+    }
+    
+    #sec1-1 p{
+        clear: both;
+        float: left;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    #sec1-1 p::after{
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    
+    #sec1-1 p:nth-child(2){
+        margin-left: 0px;
+        
+    }
+    
+    :is(#sec1-1 p:nth-child(2), #sec1-1 p:nth-child(1), #sec1-1 p:nth-child(3))::after{
+        font-size: 12px;
+        top: 35px;
+    }
+}
+
